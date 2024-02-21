@@ -1,3 +1,6 @@
+# Resources Used: Flap.js, Sipser: Introduction to the Theory of Computation
+# Author: Ethan Han - e7han@ucsd.edu
+
 import collections
 
 
