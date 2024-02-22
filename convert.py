@@ -89,14 +89,15 @@ def convert(states, alphabet, transitions, startState, acceptStates):
                         if reachable in acceptStates:
                             newAccept.append(reachableStates)
             else:
-                if [currStates,"q_trap",sym]:
+                if [currStates,"q_trap",sym] not in newTransitions:
                     newTransitions.append([currStates,"q_trap",sym])
                             
-    newStates.insert(0,newStart)
     newStates.append(["q_trap"])
 
     for sym in alphabet:
         newTransitions.append(["q_trap", "q_trap", sym])
+
+    
 
     print("Set of States: ", *newStates, sep='\n- ')
     print("Alphabet: ", *alphabet, sep='\n- ')
